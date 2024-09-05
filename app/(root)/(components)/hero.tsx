@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
-import { LuCircle, LuCircleDot } from "react-icons/lu";
+import { LuChevronLeft, LuCircle, LuCircleDot } from "react-icons/lu";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 
@@ -44,7 +44,7 @@ export const Hero = () => {
   };
 
   const arrow =
-    "z-40 absolute top-1/2 -translate-y-1/2 flex items-center justify-center h-8 w-8 bg-black bg-opacity-50 rounded-full text-white opacity-50 hover:bg-opacity-50 group-hover:opacity-100 hover:scale-110 transition-all duration-100";
+    "z-40 absolute top-1/2 -translate-y-1/2 flex items-center justify-center h-8 w-8 bg-black bg-opacity-50 rounded-full text-white opacity-50 hover:bg-opacity-50 group-hover:opacity-100 hover:scale-110 transition";
 
   const dots =
     "stroke-white fill-[rgba(0,0,0,.5)] opacity-50 group-hover:opacity-100 hover:scale-110 focus-visible:scale-110 transition-all duraiton-100";
@@ -59,7 +59,7 @@ export const Hero = () => {
   }, [next, mouseEnter]);
 
   return (
-    <div className="max-w-[1200px] overflow-hidden w-full aspect-[4/2] lg:aspect-[5/2]  my-2 rounded-lg mx-auto">
+    <section className="overflow-hidden w-full aspect-[4/2] lg:aspect-[5/2]">
       <div
         onMouseEnter={() => setMouseenter(true)}
         onMouseLeave={() => setMouseenter(false)}
@@ -77,7 +77,6 @@ export const Hero = () => {
                 className={`z-40 object-cover w-full h-full ease-in-out duration-500`}
               />
               <div
-                // style={{ textShadow: "1px 0 black" }}
                 className={`z-40 bottom-8 sm:bottom-12 left-12 sm:left-16 right-10 absolute text-white capitalize ${
                   i === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 } transition-all duration-300`}
@@ -92,20 +91,20 @@ export const Hero = () => {
             </div>
           ))}
         </div>
-        <Button onClick={() => prev()} className={`${arrow} left-3 sm:left-6`}>
+        <button type="button" title="left arrow" onClick={() => prev()} className={`${arrow} left-3 sm:left-6`}>
           <FaChevronLeft />
-        </Button>
-        <Button onClick={() => next()} className={`${arrow} right-3 sm:right-6`}>
+        </button>
+        <button type="button" title="right arrow" onClick={() => next()} className={`${arrow} right-3 sm:right-6`}>
           <FaChevronRight />
-        </Button>
+        </button>
         <div className="z-40 absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
           {sliders.map((_, i) => (
-            <Button key={i} onClick={() => setIndex(i)}>
+            <button title="dots" type="button" key={i} onClick={() => setIndex(i)}>
               {i === index ? <LuCircleDot className={`${dots}`} /> : <LuCircle className={`${dots}`} />}
-            </Button>
+            </button>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

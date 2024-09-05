@@ -7,8 +7,8 @@ export default function ProfilPage() {
     <section>
       <Container>
         <Title title="Profil" />
-        <div className="flex w-full py-8 gap-6">
-          <div>
+        <div className="flex flex-col md:flex-row w-full py-8 gap-6">
+          <div className="order-2 md:order-1">
             <div id="tentang-kami" className="w-full py-4 scroll-mt-16">
               <h2 className="text-xl font-bold text-green-600 py-3">Tentang Kami</h2>
               <p className="">
@@ -22,13 +22,13 @@ export default function ProfilPage() {
                 ruang dan waktu.
               </p>
             </div>
-            <div id="tiga-pilar" className="w-full py-4">
+            <div id="tiga-pilar" className="w-full py-4 scroll-mt-16">
               <h2 className="text-xl font-bold text-green-600">Tiga Pilar</h2>
               <TigaPilarAcc />
             </div>
           </div>
 
-          <div className="min-w-48 sticky top-16 self-start py-6">
+          <div className="order-1 md:order-2 min-w-full md:min-w-48 static md:sticky top-16 self-start py-6">
             <h2 className="border text-white p-2 bg-green-500 rounded-lg">Content</h2>
             <div className="flex flex-col gap-2 text-muted-foreground text-sm p-2 py-4">
               <Link href="#tentang-kami">Tentang Kami</Link>
