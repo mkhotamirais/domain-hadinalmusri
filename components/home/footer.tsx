@@ -37,9 +37,9 @@ const footerAlamat = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-green-300 to white">
-      <Container>
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 py-8">
+    <footer className="bg-background">
+      <div className="container">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 py-12">
           <div>
             <Logo />
           </div>
@@ -50,10 +50,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="py-4 flex items-center justify-between">
-          <small>Copyright &copy; {new Date().getFullYear()}. Hadinalmusri</small>
+          <small>
+            Copyright &copy; {new Date().getFullYear()}, <span className="text-primary">Hadin Al-Musri`</span>
+          </small>
           <Socials />
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

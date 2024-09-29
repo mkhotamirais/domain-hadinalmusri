@@ -24,8 +24,8 @@ export function TigaPilarAcc() {
   return (
     <Accordion type="single" collapsible>
       {dataTigaPilar.map((item, i) => (
-        <AccordionItem value={`${i}`} key={i}>
-          <AccordionTrigger>{item.title}</AccordionTrigger>
+        <AccordionItem value={`${i}`} key={i} className="text-left">
+          <AccordionTrigger className="text-left">{item.title}</AccordionTrigger>
           <AccordionContent>{item.content}</AccordionContent>
         </AccordionItem>
       ))}

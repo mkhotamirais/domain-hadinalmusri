@@ -25,7 +25,7 @@ export const Title = ({ title }: { title: string }) => {
   return (
     <div className="h-32 border my-2 rounded-lg bg-[url('/images/slider1.jpg')] bg-cover bg-center overflow-hidden">
       <div className="bg-gradient-to-t from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] flex items-center justify-center h-full">
-        <h1 className="text-green-400 text-3xl font-bold">{title}</h1>
+        <h1 className="text-primary text-3xl font-bold">{title}</h1>
       </div>
     </div>
   );

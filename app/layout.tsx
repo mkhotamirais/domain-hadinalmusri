@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/home/header";
 import Footer from "@/components/home/footer";
 import { MainClient } from "@/components/wrapper";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,10 +40,13 @@ export default function RootLayout({
         />
         <meta name="author" content="Yayasan Hadin Al Musri" />
       </head>
+
       <body className={`${inter.className} min-h-screen flex flex-col`}>
-        <Header />
-        <MainClient>{children}</MainClient>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <MainClient>{children}</MainClient>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

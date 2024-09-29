@@ -1,12 +1,12 @@
-import { Container, Title } from "@/components/wrapper";
+import { Title } from "@/components/wrapper";
 import React from "react";
 
 export default function KontakPage() {
   return (
     <section>
-      <Container>
+      <div className="container">
         <Title title="Kontak" />
-      </Container>
+      </div>
     </section>
   );
 }

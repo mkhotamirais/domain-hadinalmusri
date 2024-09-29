@@ -22,11 +22,11 @@ const timPerusahaanIklanList = [
 export default function TimRedaksiPage() {
   return (
     <section>
-      <Container>
+      <div className="container">
         <Title title="Tim Redaksi" />
         <div className="py-8">
           <div className="py-4">
-            <h3 className="text-xl font-bold py-4 text-green-600">Tim Redaksi</h3>
+            <h3 className="text-xl font-bold py-4 text-primary">Tim Redaksi</h3>
             <div className="max-w-3xl">
               <table className="border w-full">
                 <tbody>
@@ -41,7 +41,7 @@ export default function TimRedaksiPage() {
             </div>
           </div>
           <div className="py-4">
-            <h3 className="text-xl font-bold py-4 text-green-600">Tim Perusahaan Dan Iklan</h3>
+            <h3 className="text-xl font-bold py-4 text-primary">Tim Perusahaan Dan Iklan</h3>
             <div className="max-w-3xl">
               <table className="border w-full">
                 <tbody>
@@ -56,7 +56,7 @@ export default function TimRedaksiPage() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

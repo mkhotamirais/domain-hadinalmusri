@@ -1,11 +1,11 @@
-import { Container, Title } from "@/components/wrapper";
+import { Title } from "@/components/wrapper";
 
 export default function KarirPage() {
   return (
     <section>
-      <Container>
+      <div className="container">
         <Title title="Karir" />
-      </Container>
+      </div>
     </section>
   );
 }

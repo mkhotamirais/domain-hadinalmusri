@@ -19,7 +19,7 @@ export const Socials = ({ className }: { className?: string }) => {
             href={s.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-6 sm:w-7 hover:scale-110 hover:text-green-600 transition-all duration-100"
+            className="w-6 sm:w-7 hover:scale-110 hover:text-primary transition-all duration-100"
           >
             {s.icon}
           </a>

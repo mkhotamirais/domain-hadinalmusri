@@ -1,11 +1,11 @@
-import { Container, Title } from "@/components/wrapper";
+import { Title } from "@/components/wrapper";
 import Link from "next/link";
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa6";
 
 export default function InfoIklanPage() {
   return (
     <section>
-      <Container>
+      <div className="container">
         <Title title="Info Iklan" />
         <div className="text-white text-center leading-relaxed rounded-lg w-full sm:w-2/3 lg:w-1/2 my-10 mx-auto p-5 flex flex-col gap-3 bg-gradient-to-b from-green-300 via-green-700 to-green-300">
           <p>Kontak untuk Kerja Sama Iklan dan Media Partner Media Center Yayasan hadin Al Musri:</p>
@@ -21,7 +21,7 @@ export default function InfoIklanPage() {
             </Link>
           </p>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

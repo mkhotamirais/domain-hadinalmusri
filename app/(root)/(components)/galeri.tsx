@@ -1,6 +1,5 @@
 "use client";
 
-import { Container } from "@/components/wrapper";
 import Image from "next/image";
 
 const hadinGalery = [
@@ -14,10 +13,10 @@ const hadinGalery = [
 
 export default function Galeri() {
   return (
-    <div className="py-8">
-      <Container>
+    <div className="py-12 bg-secondary">
+      <div className="container">
         <h2 className={"mb-6 sm:mb-8 text-2xl font-bold text-green-600 text-center"}>Galeri</h2>
-        <div id="imgGaleri" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2">
+        <div id="imgGaleri" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1 sm:gap-2">
           {hadinGalery.map((item, i) => (
             <Image
               key={i}
@@ -25,11 +24,11 @@ export default function Galeri() {
               height={400}
               src={item}
               alt={"hadin image"}
-              className="size-56 md:size-72 object-center object-cover rounded overflow-hidden"
+              className="h-64 w-full object-center object-cover rounded overflow-hidden"
             />
           ))}
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

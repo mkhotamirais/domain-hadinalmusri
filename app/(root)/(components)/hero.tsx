@@ -59,7 +59,7 @@ export const Hero = () => {
   }, [next, mouseEnter]);
 
   return (
-    <section className="overflow-hidden w-full aspect-[4/2] lg:aspect-[5/2]">
+    <section className="overflow-hidden w-full aspect-[3/2] md:aspect-[8/3]">
       <div
         onMouseEnter={() => setMouseenter(true)}
         onMouseLeave={() => setMouseenter(false)}
@@ -77,11 +77,16 @@ export const Hero = () => {
                 className={`z-40 object-cover w-full h-full ease-in-out duration-500`}
               />
               <div
-                className={`z-40 bottom-8 sm:bottom-12 left-12 sm:left-16 right-10 absolute text-white capitalize ${
+                className={`z-40 bottom-8 sm:bottom-12 left-12 sm:left-16 right-10 absolute capitalize ${
                   i === index ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 } transition-all duration-300`}
               >
-                <div className="text-base sm:text-2xl lg:text-3xl mb-0 sm:mb-5">{i === index ? sld?.title : ""}</div>
+                <div
+                  style={{ textShadow: ".1rem .1rem .1rem #ffffff" }}
+                  className="text-base sm:text-2xl lg:text-3xl mb-0 sm:mb-5 text-primary font-bold"
+                >
+                  {i === index ? sld?.title : ""}
+                </div>
                 <div>{i === index ? sld?.content : ""}</div>
               </div>
               {i === index ? sld?.content : ""}

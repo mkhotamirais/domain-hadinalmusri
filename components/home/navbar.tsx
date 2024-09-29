@@ -46,7 +46,7 @@ export const Navbar = () => {
     <nav
       className={`${
         nav ? "scale-y-100" : "scale-y-0"
-      } origin-top md:scale-y-100 transition fixed top-16 left-0 right-0 md:static bg-white md:bg-inherit p-3 md:p-0 shadow md:shadow-none`}
+      } origin-top md:scale-y-100 transition bg-white/90 dark:bg-black/90 dark:md:bg-transparent fixed top-16 left-0 right-0 md:static p-3 md:p-0 shadow md:shadow-none`}
     >
       <div className="flex flex-col md:flex-row gap-0 md:gap-6">
         {navbarMenu.map((item, i) => (
@@ -55,7 +55,7 @@ export const Navbar = () => {
             href={item.href}
             key={i}
             className={`${
-              path1 === item.href.split("/")[1] ? "text-green-500" : "text-muted-foreground"
+              path1 === item.href.split("/")[1] ? "text-primary" : ""
             } hover:text-green-500 text-sm min-w-max py-3 md:py-0 border-b md:border-none text-center`}
           >
             {item.label}
