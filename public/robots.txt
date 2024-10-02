@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hadinalmusri.com
+
+# Sitemaps
+Sitemap: https://hadinalmusri.com/sitemap.xml

@@ -1,6 +1,11 @@
 import { Title } from "@/components/wrapper";
+import { Metadata } from "next";
 import Link from "next/link";
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa6";
+
+export const metadata: Metadata = {
+  title: "Info Iklan",
+};
 
 export default function InfoIklanPage() {
   return (

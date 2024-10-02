@@ -1,6 +1,11 @@
 import { Title } from "@/components/wrapper";
 import Link from "next/link";
 import { TigaPilarAcc } from "./tiga-pilar-acc";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Profil",
+};
 
 export default function ProfilPage() {
   return (
